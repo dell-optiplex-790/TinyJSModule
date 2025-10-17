@@ -1,18 +1,23 @@
+// IMPORTANT!!! You HAVE to use ES3 on this file. Otherwise it'll break ancient browsers.
+
 var functions = [
     function(name, func) {
         if(typeof name != 'string') {
-            throw Error('Invalid module name: ' + name + '!');
+            throw Error('Invalid module name!');
         }
         if(typeof modules.registry[name] == 'function') {
-            throw Error('Cannot overwrite module: ' + name)
+            throw Error('Cannot overwrite module!')
         }
         modules.registry[name] = func;
     },
     function(name) {
-        if(typeof modules.cache[name] == 'function') {
+        if(typeof name != 'string') {
+            throw Error('Invalid module name!');
+        }
+        if(typeof modules.cache[name] != 'undefined') {
             return modules.cache[name];
         } else if(typeof modules.registry[name] == 'function') {
-            var module = {};
+            var module = {exports: {default: null}};
             modules.registry[name](module, name, require);
             modules.cache[name] = module.exports;
             return module.exports;
