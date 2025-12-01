@@ -2,16 +2,12 @@ TinyJSModule ===================================================
 
 This is a re-impelementation of CommonJS, but it uses ES3 for
 some reason. Please, I beg you, don't ask any questions. Though,
-there are some enhancements:
-
- * module.exports.default: Nobody asked for this, and it has no
-   reasonable uses.
+there are some changes:
 
  * __name: This variable gives you the name of the module that
    you're currently in. Actually kinda useful.
 
- * __name: This variable gives you the name of the module that
-   you're currently in. Actually kinda useful.
+ * __dirname: self-explanatory
 
 Project FAQ ====================================================
 
