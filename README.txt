@@ -27,6 +27,9 @@ Project FAQ ====================================================
     Q: How do I bundle up my project?
     A: use the bundle.js thing idk
 
+    Q: Should I use a JavaScript minifier on my bundle?
+    A: Yes, you should.
+
 
 Changelog ======================================================
 
