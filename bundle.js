@@ -22,10 +22,10 @@ listing.forEach(file => {
     console.log(`Bundling: ${file}`)
     var content = fs.readFileSync(file, 'utf8').replaceAll('\r', '')
     content = content.split('\n').map(line => `\t\t${line}`).join('\n');
-    code += `\n\n\tModule('${file.replaceAll('\\','/').split('/').at(-1).slice(0, -3)}', function(module, __name, require) {\n${content}\n\t});`;
+    code += `\n\n\tModule('/${file.replaceAll('\\','/').split('/').slice(1).join('/')}', function(module, __dirname, __name, require) {\n${content}\n\t});`;
 })
 
-code += '\n\n\n\t// Return export\n\n\tvar _ = require(\'index\');\n\tif(_.default != null) {\n\t\t_ = _.default;\n\t}\n\treturn _;\n})();'
+code += '\n\n\n\t// Return export\n\n\treturn require(\'./index\');\n})();'
 
 fs.writeFileSync(path.join(dir, '..', dir + '.bundle.js'), code);
 console.log('Success.')

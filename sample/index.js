@@ -1,12 +1,7 @@
-var hello = require('hello');
+var hello = require('./hello');
+var reverse = require('reverse-string');
 
 console.log(hello.world());
 
-var string = hello.world().match(/./gs); // split string
-var reversed = '';
-for(var i = string.length - 1; i > -1; i--) {
-    reversed += string[i];
-}
-
-
-module.exports.default = reversed;
+module.exports = reverse(hello.world());
+console.info(module.exports);

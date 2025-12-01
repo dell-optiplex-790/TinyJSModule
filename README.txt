@@ -10,6 +10,9 @@ there are some enhancements:
  * __name: This variable gives you the name of the module that
    you're currently in. Actually kinda useful.
 
+ * __name: This variable gives you the name of the module that
+   you're currently in. Actually kinda useful.
+
 Project FAQ ====================================================
 
     Q: Will you release this project on GitHub?
@@ -28,5 +31,12 @@ Project FAQ ====================================================
     Q: How do I bundle up my project?
     A: use the bundle.js thing idk
 
+
+Changelog ======================================================
+
+   v1.0 - Make the basics of the module system
+   
+   v1.1 - Increase the sample project's complexity and finally
+           add directory support
 
 OK, thanks for reading this.
