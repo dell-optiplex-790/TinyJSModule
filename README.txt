@@ -35,8 +35,11 @@ Project FAQ ====================================================
 Changelog ======================================================
 
    v1.0 - Make the basics of the module system
+
+   v1.1 - Patch: Remove regex's /u flag so that it's ES3-
+          compatible.
    
-   v1.1 - Increase the sample project's complexity and finally
+   v1.2 - Increase the sample project's complexity and finally
            add directory support
 
 OK, thanks for reading this.
