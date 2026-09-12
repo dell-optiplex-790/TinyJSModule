@@ -11,7 +11,7 @@ there are some changes:
 
 Project FAQ ====================================================
 
-    Q: Will you release this project on GitHub?
+    Q: Will you release this project on GitHub? <---- i did release it on github because why not
     A: Probably not. One of the reasons is that random kids on
        the internet will steal this project if they find it.
 
